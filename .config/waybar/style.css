@@ -1,0 +1,149 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: rgba(30, 30, 46, 0.9);
+  border-radius: 0;
+  color: #cdd6f4;
+}
+
+/* Workspaces */
+#workspaces {
+  background: transparent;
+  margin: 5px 5px 5px 10px;
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  color: #6c7086;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+  color: #cba6f7;
+  background-color: rgba(203, 166, 247, 0.2);
+}
+
+#workspaces button.urgent {
+  color: #f38ba8;
+  background-color: rgba(243, 139, 168, 0.2);
+}
+
+#workspaces button:hover {
+  background-color: rgba(108, 112, 134, 0.2);
+  color: #cdd6f4;
+}
+
+/* Window Title */
+#window {
+  margin: 5px;
+  padding: 0 10px;
+  color: #89dceb;
+  font-weight: 600;
+}
+
+/* Clock */
+#clock {
+  margin: 5px 10px 5px 5px;
+  padding: 0 15px;
+  background-color: rgba(203, 166, 247, 0.15);
+  color: #cba6f7;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* System Modules */
+#cpu,
+#memory,
+#battery,
+#network,
+#pulseaudio {
+  margin: 5px 2px;
+  padding: 0 12px;
+  background-color: rgba(49, 50, 68, 0.8);
+  color: #cdd6f4;
+  border-radius: 8px;
+}
+
+#cpu {
+  color: #f9e2af;
+}
+
+#memory {
+  color: #a6e3a1;
+}
+
+#battery {
+  color: #89dceb;
+}
+
+#battery.charging {
+  color: #a6e3a1;
+}
+
+#battery.warning:not(.charging) {
+  color: #f9e2af;
+}
+
+#battery.critical:not(.charging) {
+  color: #f38ba8;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  to {
+    background-color: rgba(243, 139, 168, 0.3);
+  }
+}
+
+#network {
+  color: #89b4fa;
+}
+
+#network.disconnected {
+  color: #f38ba8;
+}
+
+#pulseaudio {
+  color: #cba6f7;
+}
+
+#pulseaudio.muted {
+  color: #6c7086;
+}
+
+/* System Tray */
+#tray {
+  margin: 5px 10px 5px 5px;
+  padding: 0 8px;
+  background-color: rgba(49, 50, 68, 0.8);
+  border-radius: 8px;
+}
+
+#tray>.passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+/* Tooltips */
+tooltip {
+  background-color: rgba(30, 30, 46, 0.95);
+  border: 2px solid rgba(203, 166, 247, 0.5);
+  border-radius: 8px;
+  color: #cdd6f4;
+}
+
+tooltip label {
+  padding: 8px;
+  color: #cdd6f4;
+}
