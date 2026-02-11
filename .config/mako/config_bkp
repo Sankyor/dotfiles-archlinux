@@ -1,0 +1,15 @@
+# Tiempo en ms (5000 = 5 segundos)
+default-timeout=5000
+
+# No guardar historial eterno
+max-history=100
+history=true
+
+# Que desaparezcan solas
+ignore-timeout=false
+
+# Posición
+anchor=top-right
+
+# Margen
+margin=10

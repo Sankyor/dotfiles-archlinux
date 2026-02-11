@@ -1,0 +1,20 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "battery", "tray","custom/notifications"],
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d %A}"
+  },
+  "custom/notifications": {
+    "exec": "~/.config/waybar/scripts/notifications.sh",
+    "interval": 5,
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/notifications_menu.sh"
+  }
+}
+
